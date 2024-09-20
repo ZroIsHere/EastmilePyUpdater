@@ -1,9 +1,9 @@
-import requests
 import os
 import hashlib
 import json
 import sys
 import subprocess
+import requests
 from tqdm import tqdm
 
 BASE_URL = "https://cdn.eastmile.org/eastmile-updates/client/"
@@ -88,8 +88,10 @@ def main():
             download_file(file_path, file_url)
         else:
             print(f"\rArchivo actualizado: {file_path}")
-    
-    subprocess.run(["wine", "NostaleClientX.exe","EntwellNostaleClient", "0"])
+    if os.name == "nt":
+	    subprocess.run(["NostaleClientX.exe", "EntwellNostaleClient", "0"])
+    else:
+	    subprocess.run(["wine", "NostaleClientX.exe", "EntwellNostaleClient", "0"])
 if __name__ == "__main__":
     main()
 
