@@ -1,4 +1,6 @@
 # Eastmile Python Updater
+  First of all, use ``pip install requests tqdm``
+
 ## Why i maked it?
   Just because my brother play it on my linux computer and the animated background dont work on wine and it crash, so for have it updated, i just make it easy on python
 
