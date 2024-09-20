@@ -89,9 +89,9 @@ def main():
         else:
             print(f"\rArchivo actualizado: {file_path}")
     if os.name == "nt":
-		subprocess.run(["NostaleClientX.exe", "EntwellNostaleClient", "0"])
+	    subprocess.run(["NostaleClientX.exe", "EntwellNostaleClient", "0"])
     else:
-		subprocess.run(["wine", "NostaleClientX.exe", "EntwellNostaleClient", "0"])
+	    subprocess.run(["wine", "NostaleClientX.exe", "EntwellNostaleClient", "0"])
 if __name__ == "__main__":
     main()
 
